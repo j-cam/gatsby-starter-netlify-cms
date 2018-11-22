@@ -45,7 +45,7 @@ collections:
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
-    folder: "content/blog/posts" # The path to the folder where the documents are stored
+    folder: "src/content/blog/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: 'json'
@@ -58,7 +58,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "page" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
-    folder: "content/page/posts" # The path to the folder where the documents are stored
+    folder: "src/content/page/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: 'json'
@@ -73,7 +73,7 @@ collections:
     - label: "Site Info"
       name: "info"
       format: 'json'
-      file: "content/setup/info.json"
+      file: "src/content/setup/info.json"
       fields:
         - {label: Site Name, name: sitename, widget: string}
         - {label: Site Description, name: sitedescription, widget: string}
@@ -90,7 +90,7 @@ collections:
     - label: "Connect"
       name: "connect"
       format: 'json'
-      file: "content/setup/connect.json"
+      file: "src/content/setup/connect.json"
       fields:
         - label: 'Links'
           name: 'connectlinks'
@@ -100,7 +100,7 @@ collections:
             - {label: URL, name: url, widget: string}
   - label: 'Categories'
     name: 'blogcategories'
-    folder: "content/categories/posts" # The path to the folder where the documents are stored
+    folder: "src/content/categories/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     format: 'json'
